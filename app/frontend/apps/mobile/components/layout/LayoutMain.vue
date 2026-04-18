@@ -8,6 +8,7 @@ import { useStickyHeader } from '#shared/composables/useStickyHeader.ts'
 
 import { headerOptions as header } from '#mobile/composables/useHeader.ts'
 
+import DesktopSwitchBanner from './DesktopSwitchBanner.vue'
 import LayoutBottomNavigation from './LayoutBottomNavigation.vue'
 import LayoutHeader, { type Props as HeaderProps } from './LayoutHeader.vue'
 
@@ -35,6 +36,7 @@ const { stickyStyles } = useStickyHeader([title], headerElement)
 
 <template>
   <div class="flex h-full flex-col">
+    <DesktopSwitchBanner />
     <LayoutHeader
       v-if="showHeader"
       ref="headerComponent"
